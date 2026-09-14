@@ -1,0 +1,31 @@
+{
+  "cue_path": "I:\\Projects\\PSX-Ports-pilot\\_disc\\wild-arms\\Wild Arms (USA).cue",
+  "cue_name": "Wild Arms (USA).cue",
+  "bin_name": "Wild Arms (USA).bin",
+  "track_count": 1,
+  "data_track_size": 637163856,
+  "data_track_md5": "19f6de83eb8b7525d7bf8eb27566ce30",
+  "data_track_sha1": "428a3678e42c0660697bf43643db1aa566f4821b",
+  "data_track_crc32": "53a5248c",
+  "boot_exe": "SCUS_946.08",
+  "serial": "SCUS-94608",
+  "serial_exe": "SCUS_946.08",
+  "volume_id": "WILDARMS",
+  "display_name": "Wild Arms",
+  "load_address": "0x80011420",
+  "entry_pc": "0x80026F54",
+  "text_size": "0x00023800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "09df9c687df9c0e9ad85117c4e1ee73e9bacfee0d9cc64ec46dce552c5322d9a",
+  "boot_exe_sha256": "856548b34a0683d48fbb254f7ff5fe21e116a8e6ccfdaebf0667f344f39fc44b",
+  "seed_count": 313,
+  "warnings": [
+    "cue has only 1 TRACK \u2014 Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

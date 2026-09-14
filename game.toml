@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Wild Arms"
+id = "SCUS-94608"
+players = 2
+exe = "disc/SCUS_946.08"
+disc = "disc/Wild Arms (USA).cue"
+load_address = "0x80011420"
+entry_pc = "0x80026F54"
+text_size = "0x00023800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Wild Arms (USA).bin"
+cue_name = "Wild Arms (USA).cue"
+boot_exe = "SCUS_946.08"
+known_sizes = [637163856]
+known_md5 = [
+  "19f6de83eb8b7525d7bf8eb27566ce30",
+]
+known_sha1 = [
+  "428a3678e42c0660697bf43643db1aa566f4821b",
+]
+known_crc32 = [
+  "53a5248c",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+window_title = "Wild Arms Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "09df9c687df9c0e9ad85117c4e1ee73e9bacfee0d9cc64ec46dce552c5322d9a"
